@@ -1,0 +1,72 @@
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+section {
+    padding-block: 100px;
+
+    .section-ttl {
+        text-align: center;
+        position: relative;
+        margin-bottom: 80px;
+
+        h3 {
+            font-size: 2rem;
+
+        }
+
+        // span {
+        //     position: absolute;
+        //     color: #FFBD59;
+        //     top: -16px;
+        //     left: 50%;
+        //     transform: translateX(50%) rotate(12deg);
+        //     font-size: 1.5rem;
+        //     font-family: "Mrs Saint Delafield", cursive;
+        //     font-weight: 400;
+        //     font-style: normal;
+        // }
+
+        span {
+            font-size: 1rem;
+            color: #666;
+        }
+    }
+
+    .section-lead {
+        max-width: 850px;
+        width: 100%;
+        margin: 30px auto;
+        padding-inline: 20px;
+        
+    }
+}
+
+
+// google font
+.mrs-saint-delafield-regular {
+    font-family: "Mrs Saint Delafield", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (max-width: 875px) {
+    section {
+        padding-block: 30px;
+
+        .section-ttl {
+            margin-bottom: 30px;
+        }
+    }
+
+
+}

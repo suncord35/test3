@@ -1,0 +1,130 @@
+#development-page {
+    padding-top: 0;
+
+    .development-page-ttl {
+        height: calc(378px + 60px);
+        background: url(../images/img2.jpeg) no-repeat center center / cover;
+
+        // h2 {
+        //     color: #fff;
+        //     font-size: 4.5rem;
+        //     text-align: center;
+        //     height: calc(378px + 60px);
+        //     background: rgba($color: #333333, $alpha: 0.5);
+        //     line-height: 474px;
+
+        //     span {
+        //         display: block;
+        //         font-size: 3vmin;
+        //         line-height: 100px;
+        //         color: #fff;
+        //     }
+        // }
+
+        h2 {
+            color: #fff;
+            font-size: 4rem;
+            text-align: center;
+            line-height: 100px;
+            background: rgba($color: #333333, $alpha: 0.5);
+            padding: 120px 10px;
+
+
+            span {
+                display: block;
+                font-size: 1.5rem;
+                line-height: 100px;
+                color: #fff;
+            }
+
+        }
+
+
+
+    }
+
+
+    .development-inner {
+        max-width: 967px;
+        width: 85%;
+        margin-inline: auto;
+        padding: 3%;
+        }
+
+    }
+
+    .to-home {
+        margin-top: 60px;
+        text-align: center;
+
+        a.home-btn {
+            border: 2px solid #FFBD59;
+            border-radius: 20px;
+            background: #fff;
+            color: #FFBD59;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            padding: 12px 40px;
+            transition: ease .2s;
+
+            &:hover {
+                border: 2px solid #fff;
+                border-radius: 20px;
+                background: #FFBD59;
+                color: #fff;
+            }
+        }
+    }
+
+
+@keyframes skewanime {
+    100% {
+        left: -10%;
+        /*画面の見えていない左から右へ移動する終了地点*/
+    }
+}
+
+@media (max-width: 875px) {
+    #contact-page {
+
+        .contact-page-ttl {
+
+            h2 {
+                font-size: 2.3rem;
+            }
+        }
+
+        .contact-page-inner {
+
+            dl {
+                flex-direction: column;
+
+                dt {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+
+                dd {
+                    width: 100%;
+                    max-width: 900px;
+
+                    textarea {
+                        border: 1px solid #333;
+                        border-radius: 5px;
+                        background: #fff;
+                        padding: 5px;
+                        width: 100%;
+                    }
+                }
+
+                .inquiry {
+
+                    margin-bottom: 40px;
+                }
+            }
+
+        }
+    }
+
+
+}

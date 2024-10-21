@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@use "parts/basic";
+@use "parts/header";
+@use "parts/index";
+@use "parts/menu";
+@use "parts/contact";
+@use "parts/development";
+@use "parts/footer";
+@use 'parts/mixin' as i;
+@use 'parts/mixin' as m;

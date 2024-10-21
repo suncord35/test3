@@ -1,0 +1,293 @@
+footer {
+    padding-inline: 8%;
+
+    #page-top {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        z-index: 2;
+        opacity: 0;
+        transform: translateX(100px);
+
+
+        &.LeftMove{
+            animation: LeftAnime 0.5s forwards;
+        }
+
+        &.RightMove{
+            animation: RightAnime 0.5s forwards;
+        }
+
+        a {
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            background: url(../images/page-top_0.png);
+            background-size: contain;
+            border-radius: 5px;
+            width: 50px;
+            height: 50px;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase; 
+            text-decoration: none;
+            font-size:0.6rem;
+            transition:all 0.3s;
+
+            // display: block;
+            // width: 100px;
+            // height: 100px;
+            // color: #333;
+            // text-align: center;
+            // text-transform: uppercase;
+            // text-decoration: none;
+            // font-size: 0.6rem;
+            /*背景画像の指定*/
+            // background: url(../images/page-top_2.png) no-repeat center;
+            // background-size: contain;
+
+            &:hover {
+                // background:#fff;
+                // color: #2aa0e9;
+                background: url(../images/page-top_1.png);
+                background-size: contain;
+            }
+        }
+
+        // &.floatAnime {
+        //     a {
+        //         width: 100px;
+        //         height: 130px;
+        //         /*背景画像の指定*/
+        //         background: url(../images/page-top_1.png) no-repeat center;
+        //         background-size: contain;
+        //         /*アニメーションの指定*/
+        //         animation: floatAnime 2s linear infinite;
+        //         opacity: 0;
+        //     }
+        // }
+    }
+
+    // .footer-inner {
+    //     display: flex;
+    //     margin-bottom: 20px;
+
+    //     .footer-logo-sns {
+    //         width: 30%;
+    //         text-align: center;
+
+    //         a {
+    //             width: 200px;
+    //             height: auto;
+    //             margin-bottom: 60px;
+    //             display: inline-block;
+
+    //             img {
+    //                 width: 100%;
+    //                 object-fit: cover;
+    //             }
+    //         }
+
+    //         .footer-sns {
+    //             text-align: center;
+
+    //             a {
+    //                 width: 25px;
+    //                 height: auto;
+    //                 margin-inline: 5px;
+    //             }
+    //         }
+    //     }
+
+    //     .footer-nav-address {
+    //         width: 70%;
+    //         padding: 30px;
+
+    //         .footer-nav {
+    //             display: flex;
+    //             flex-wrap: wrap;
+    //             margin-bottom: 60px;
+
+    //             li {
+    //                 margin-left: 20px;
+    //                 padding-right: 20px;
+    //                 border-right: 1px solid #333;
+    //                 line-height: 0.9;
+
+    //                 &:last-child {
+    //                     border-right: none;
+    //                 }
+    //             }
+
+    //             .animoGradientBorder {
+    //                 display: inline-block;
+    //                 position: relative;
+    //                 overflow: hidden;
+    //                 padding-bottom: 2px;
+    //                 margin-bottom: 16px;
+    //                 cursor: pointer;
+    //                 color: #474e51;
+
+
+    //                 &::before {
+    //                     position: absolute;
+    //                     z-index: -1;
+    //                     text-align: center;
+    //                     content: '';
+    //                     left: 0;
+    //                     bottom: 0;
+    //                     width: 80%;
+    //                     height: 3px;
+    //                     background: linear-gradient(to right, #f39c12, #474e51);
+    //                     transition: transform .3s ease-in-out;
+    //                     transform: translateX(-101%)
+    //                 }
+
+    //                 &:hover::before {
+    //                     transform: translateX(0)
+    //                 }
+    //             }
+    //         }
+
+    //         .address {
+    //             margin-left: 20px;
+    //             display: flex;
+    //             flex-wrap: wrap;
+    //             font-size: 0.9rem;
+
+    //             dt {
+    //                 width: 10%;
+    //                 margin-bottom: 8px;
+    //             }
+
+    //             dd {
+    //                 width: 90%;
+    //                 margin-bottom: 8px;
+    //             }
+    //         }
+    //     }
+    // }
+
+    p {
+        font-size: 0.7rem;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+}
+
+@keyframes LeftAnime{
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  #page-top.RightMove{
+	animation: RightAnime 0.5s forwards;
+}
+@keyframes RightAnime{
+  from {
+  	opacity: 1;
+	transform: translateX(0);
+  }
+  to {
+  	opacity: 1;
+	transform: translateX(100px);
+  }
+}
+
+// @keyframes UpAnime {
+//     from {
+//         opacity: 0;
+//         transform: translateY(100px);
+//     }
+
+//     to {
+//         opacity: 1;
+//         transform: translateY(0);
+//     }
+// }
+
+// @keyframes DownAnime {
+//     from {
+//         opacity: 1;
+//         transform: translateY(0);
+//     }
+
+//     to {
+//         opacity: 1;
+//         transform: translateY(100px);
+//     }
+// }
+
+// @keyframes floatAnime {
+//     0% {
+//         transform: translateX(0);
+//         opacity: 0;
+//     }
+
+//     25% {
+//         transform: translateX(-6px);
+//         opacity: 1;
+//     }
+
+//     50% {
+//         transform: translateX(0)
+//     }
+
+//     100% {
+//         transform: translateX(6px);
+//         opacity: 1;
+//     }
+// }
+
+@media (max-width: 875px) {
+    footer {
+
+        .footer-inner {
+            flex-direction: column;
+
+            .footer-logo-sns {
+                width: 100%;
+            }
+
+            .footer-nav-address {
+                width: 100%;
+                padding: 0;
+
+                .footer-nav {
+
+                    margin-bottom: 36px;
+                    justify-content: center;
+
+                    li {
+                        text-align: center;
+                    }
+
+                    .animoGradientBorder {
+                        margin-bottom: 16px;
+                    }
+                }
+
+                .footer-address {
+                    text-align: center;
+
+                    .address {
+                        margin-left: 0;
+
+
+                        dd {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}

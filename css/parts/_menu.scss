@@ -1,0 +1,189 @@
+@use 'mixin' as m;
+
+#menu-page {
+    padding-top: 0;
+
+    .menu-page-ttl {
+        height: calc(378px + 60px);
+        background: url(../images/menupage-ttl.jpg) no-repeat center center / cover;
+
+        h2 {
+            color: #fff;
+            font-size: 4.5rem;
+            text-align: center;
+            height: calc(378px + 60px);
+            background: rgba($color: #333333, $alpha: 0.5);
+            line-height: 474px;
+
+            @include m.tab {
+                font-size: 2.3rem;
+            }
+        }
+    }
+
+    .menu-page-items {
+        padding-left: 8%;
+
+        @include m.tab {
+            padding-inline: 3%;
+        }
+
+        h3 {
+            font-size: 4rem;
+
+            @include m.tab {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        .menu-page-section-top {
+            display: flex;
+            padding-bottom: 100px;
+
+            @include m.tab {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            &-text {
+                border: 1px dotted #333;
+                margin-top: 40px;
+                margin-inline: 10px;
+                padding: 20px;
+                width: 45%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                @include m.tab {
+                    width: 100%;
+                    margin-inline: 0;
+                }
+
+                dt {
+                    font-size: 1.2rem;
+                }
+
+                dd {
+                    font-size: 1.2rem;
+                }
+
+                div {
+                    width: 100%;
+                    margin-block: 4px 16px;
+                }
+            }
+
+            &-img {
+                width: 55%;
+                opacity: 0;
+                transform: translateY(100px);
+                transition: all 0.8s;
+
+                @include m.tab {
+                    display: none;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .menu-item {
+            padding-block: 80px;
+
+            @include m.tab {
+                padding-block: 40px;
+            }
+
+            &:nth-of-type(odd) .menu-item-inner {
+                flex-direction: row-reverse;
+
+                @include m.tab {
+                    flex-direction: column;
+                }
+            }
+
+            h4 {
+                font-size: 1.5rem;
+                font-weight: normal;
+                padding-left: 10px;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 4px;
+                    height: 21px;
+                    background: #005F94;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+            }
+
+            &-inner {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 12px;
+
+                @include m.tab {
+                    flex-direction: column;
+                }
+
+                &-img {
+                    width: 50%;
+                    margin-inline: 2%;
+                    opacity: 0;
+                    transform: translateY(100px);
+                    transition: all 0.8s;
+
+                    @include m.tab {
+                        width: 100%;
+                        margin-inline: 0;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                &-text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    width: 50%;
+                    background: #F6F2EB;
+                    border-radius: 10px;
+                    margin-inline: 2%;
+                    padding: 3%;
+
+                    @include m.tab {
+                        width: 100%;
+                        margin: 20px 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fade{
+    animation-name:fadeInAnime;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeInAnime{
+      from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
+    }
